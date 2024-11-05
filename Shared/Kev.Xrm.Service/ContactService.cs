@@ -202,6 +202,15 @@ namespace Kev.Xrm.Service
             Trace("Many-to-many relationships cloned successfully.");
         }
 
+        // Helper method to calculate age
+        public int CalculateAge(DateTime birthDate)
+        {
+            int age = DateTime.Now.Year - birthDate.Year;
+            if (DateTime.Now.DayOfYear < birthDate.DayOfYear)
+                age--;
+            return age;
+        }
+
         // Retrieve the list of contacts
         public List<Contact> RetrieveContacts(CrmServiceClient service)
         {
