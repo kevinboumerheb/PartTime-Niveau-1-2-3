@@ -1,11 +1,11 @@
-11/5/2024 8:25:34 PM: Connected to Dynamics 365 successfully.
-11/5/2024 8:25:34 PM: Number of active contacts: 3
-11/5/2024 8:25:34 PM: Number of inactive contacts: 1
-11/5/2024 8:25:34 PM: Number of contacts with age > 18: 2
-11/5/2024 8:25:34 PM: Number of contacts with age < 18: 1
-11/5/2024 8:25:35 PM: Decision Maker: 2
-11/5/2024 8:25:35 PM: Employee: 0
-11/5/2024 8:25:35 PM: Influencer: 1
-11/5/2024 8:26:00 PM: Time taken without ExecuteMultiple: 00:00:09.6866996
-11/5/2024 8:26:06 PM: Time taken with ExecuteMultiple: 00:00:05.1025211
-11/5/2024 8:26:06 PM: Process completed.
+11/5/2024 8:33:30 PM: Connected to Dynamics 365 successfully.
+11/5/2024 8:33:30 PM: Number of active contacts: 23
+11/5/2024 8:33:30 PM: Number of inactive contacts: 1
+11/5/2024 8:33:30 PM: Number of contacts with age > 18: 2
+11/5/2024 8:33:30 PM: Number of contacts with age < 18: 1
+11/5/2024 8:33:31 PM: Decision Maker: 2
+11/5/2024 8:33:31 PM: Employee: 0
+11/5/2024 8:33:31 PM: Influencer: 1
+11/5/2024 8:33:45 PM: Time taken without ExecuteMultiple: 00:00:09.6692584
+11/5/2024 8:33:49 PM: Time taken with ExecuteMultiple: 00:00:04.3371035
+11/5/2024 8:33:49 PM: Process completed.
