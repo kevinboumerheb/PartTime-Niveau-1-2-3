@@ -1,0 +1,118 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "System", "System", "{8BE984DF-0876-46C9-8F2C-BC62956C8A5E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{4474FB3F-8B94-4784-9979-7731E6DEE840}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{54BD2E5B-5558-4AB2-BB9D-3EB26A3BDDDA}"
+	ProjectSection(SolutionItems) = preProject
+		DLaB.EarlyBoundGenerator.DefaultSettings.xml = DLaB.EarlyBoundGenerator.DefaultSettings.xml
+		Kev.Xrm.snk = Kev.Xrm.snk
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kev.Xrm.Utilities", "Shared\Kev.Xrm.Utilities\Kev.Xrm.Utilities.csproj", "{B89527D0-4FDF-4127-AA2E-CFB63F4E42AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kev.Xrm.Service", "Shared\Kev.Xrm.Service\Kev.Xrm.Service.csproj", "{EE5B87C6-4FBF-4994-B727-B0E902BFE8F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kev.Xrm.Plugins", "System\Kev.Xrm.Plugins\Kev.Xrm.Plugins.csproj", "{8EBFB9CB-90FD-4751-9D08-E807ED837CF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kev.Xrm.WorkflowActivities", "System\Kev.Xrm.WorkflowActivities\Kev.Xrm.WorkflowActivities.csproj", "{6B2F1505-4CED-42E4-83DE-8203B70C1530}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kev.Xrm.WebResources", "System\Kev.Xrm.WebResources\Kev.Xrm.WebResources.csproj", "{E6EA4DFD-3483-47B3-A03D-1E6C06ECD383}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8004A22D-61F6-40AD-8AE5-6762C021BE04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kev.Xrm.Test", "Tests\Kev.Xrm.Test\Kev.Xrm.Test.csproj", "{C8023CDB-F57F-4AB8-A4F5-D50D124A116D}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Kev.Xrm.EntityWrappers", "Shared\Kev.Xrm.EntityWrappers\Kev.Xrm.EntityWrappers.shproj", "{7367391C-95DD-4009-8CEF-1EA18161999E}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Webresources", "System\Webresources\", "{14335D1B-1EE0-4262-B247-A39A412157A9}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_64119"
+		Debug.AspNetCompiler.PhysicalPath = "System\Webresources\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64119\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_64119"
+		Release.AspNetCompiler.PhysicalPath = "System\Webresources\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64119\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "64119"
+		SlnRelativePath = "System\Webresources\"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Batch", "Batch", "{58567938-2BBA-474D-9B30-EACB9B6AF739}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kev.Xrm.ConsoleApp", "Batch\Kev.Xrm.ConsoleApp\Kev.Xrm.ConsoleApp.csproj", "{572A0E0F-15D0-4F98-BDA8-E9A5F850289B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B89527D0-4FDF-4127-AA2E-CFB63F4E42AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B89527D0-4FDF-4127-AA2E-CFB63F4E42AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B89527D0-4FDF-4127-AA2E-CFB63F4E42AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B89527D0-4FDF-4127-AA2E-CFB63F4E42AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE5B87C6-4FBF-4994-B727-B0E902BFE8F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE5B87C6-4FBF-4994-B727-B0E902BFE8F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE5B87C6-4FBF-4994-B727-B0E902BFE8F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE5B87C6-4FBF-4994-B727-B0E902BFE8F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EBFB9CB-90FD-4751-9D08-E807ED837CF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EBFB9CB-90FD-4751-9D08-E807ED837CF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EBFB9CB-90FD-4751-9D08-E807ED837CF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EBFB9CB-90FD-4751-9D08-E807ED837CF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B2F1505-4CED-42E4-83DE-8203B70C1530}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B2F1505-4CED-42E4-83DE-8203B70C1530}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B2F1505-4CED-42E4-83DE-8203B70C1530}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B2F1505-4CED-42E4-83DE-8203B70C1530}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6EA4DFD-3483-47B3-A03D-1E6C06ECD383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6EA4DFD-3483-47B3-A03D-1E6C06ECD383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8023CDB-F57F-4AB8-A4F5-D50D124A116D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8023CDB-F57F-4AB8-A4F5-D50D124A116D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8023CDB-F57F-4AB8-A4F5-D50D124A116D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8023CDB-F57F-4AB8-A4F5-D50D124A116D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14335D1B-1EE0-4262-B247-A39A412157A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14335D1B-1EE0-4262-B247-A39A412157A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14335D1B-1EE0-4262-B247-A39A412157A9}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{14335D1B-1EE0-4262-B247-A39A412157A9}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{572A0E0F-15D0-4F98-BDA8-E9A5F850289B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{572A0E0F-15D0-4F98-BDA8-E9A5F850289B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{572A0E0F-15D0-4F98-BDA8-E9A5F850289B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{572A0E0F-15D0-4F98-BDA8-E9A5F850289B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B89527D0-4FDF-4127-AA2E-CFB63F4E42AC} = {4474FB3F-8B94-4784-9979-7731E6DEE840}
+		{EE5B87C6-4FBF-4994-B727-B0E902BFE8F7} = {4474FB3F-8B94-4784-9979-7731E6DEE840}
+		{8EBFB9CB-90FD-4751-9D08-E807ED837CF6} = {8BE984DF-0876-46C9-8F2C-BC62956C8A5E}
+		{6B2F1505-4CED-42E4-83DE-8203B70C1530} = {8BE984DF-0876-46C9-8F2C-BC62956C8A5E}
+		{E6EA4DFD-3483-47B3-A03D-1E6C06ECD383} = {8BE984DF-0876-46C9-8F2C-BC62956C8A5E}
+		{C8023CDB-F57F-4AB8-A4F5-D50D124A116D} = {8004A22D-61F6-40AD-8AE5-6762C021BE04}
+		{7367391C-95DD-4009-8CEF-1EA18161999E} = {4474FB3F-8B94-4784-9979-7731E6DEE840}
+		{14335D1B-1EE0-4262-B247-A39A412157A9} = {8BE984DF-0876-46C9-8F2C-BC62956C8A5E}
+		{572A0E0F-15D0-4F98-BDA8-E9A5F850289B} = {58567938-2BBA-474D-9B30-EACB9B6AF739}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {63EE6BE1-EA2E-468A-B9F7-A8D6783215C6}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Shared\Kev.Xrm.EntityWrappers\Kev.Xrm.EntityWrappers.projitems*{7367391c-95dd-4009-8cef-1ea18161999e}*SharedItemsImports = 13
+		Shared\Kev.Xrm.EntityWrappers\Kev.Xrm.EntityWrappers.projitems*{ee5b87c6-4fbf-4994-b727-b0e902bfe8f7}*SharedItemsImports = 4
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AudibleCompletionNotification>false</AudibleCompletionNotification>
+  <CrmSvcUtilRelativePath>DLaB.EarlyBoundGenerator\crmsvcutil.exe</CrmSvcUtilRelativePath>
+  <IncludeCommandLine>true</IncludeCommandLine>
+  <MaskPassword>true</MaskPassword>
+  <SettingsVersion>1.2023.12.6</SettingsVersion>
+  <Version>1.2023.12.6</Version>
+  <ExtensionConfig>
+    <ActionPrefixesWhitelist />
+    <ActionsWhitelist />
+    <ActionsToSkip>msdyn_getsifeatureconfiguration|
+retrieveappsetting|
+retrieveappsettinglist|
+saveappsetting</ActionsToSkip>
+    <AddDebuggerNonUserCode>true</AddDebuggerNonUserCode>
+    <AddNewFilesToProject>true</AddNewFilesToProject>
+    <AddOptionSetMetadataAttribute>false</AddOptionSetMetadataAttribute>
+    <CamelCaseClassNames>false</CamelCaseClassNames>
+    <CamelCaseMemberNames>false</CamelCaseMemberNames>
+    <CreateOneFilePerAction>false</CreateOneFilePerAction>
+    <CreateOneFilePerEntity>true</CreateOneFilePerEntity>
+    <CreateOneFilePerOptionSet>false</CreateOneFilePerOptionSet>
+    <DeleteFilesFromOutputFolders>false</DeleteFilesFromOutputFolders>
+    <EntitiesToSkip>accountleads|
+aciviewmapper|
+actioncard|
+actioncardusersettings|
+actioncarduserstate|
+activitymimeattachment|
+activitypointer|
+adminsettingsentity|
+advancedsimilarityrule|
+annualfiscalcalendar|
+apisettings|
+appconfig|
+appconfiginstance|
+appconfigmaster|
+applicationfile|
+appmodule|
+appmodulecomponent|
+appmodulemetadata|
+appmodulemetadatadependency|
+appmodulemetadataoperationlog|
+appmoduleroles|
+asyncoperation|
+attachment|
+attribute|
+attributeimageconfig|
+attributemap|
+audit|
+authorizationserver|
+azureserviceconnection|
+bookableresource|
+bookableresourcebooking|
+bookableresourcebookingexchangesyncidmapping|
+bookableresourcebookingheader|
+bookableresourcecategory|
+bookableresourcecategoryassn|
+bookableresourcecharacteristic|
+bookableresourcegroup|
+bookingstatus|
+bulkdeletefailure|
+bulkdeleteoperation|
+bulkoperation|
+bulkoperationlog|
+businessdatalocalizedlabel|
+businessprocessflowinstance|
+businessunitmap|
+businessunitnewsarticle|
+calendar|
+calendarrule|
+callbackregistration|
+campaign|
+campaignactivity|
+campaignactivityitem|
+campaignitem|
+campaignresponse|
+canvasapp|
+cardtype|
+category|
+channelaccessprofile|
+channelaccessprofileentityaccesslevel|
+channelaccessprofilerule|
+channelaccessprofileruleitem|
+channelproperty|
+channelpropertygroup|
+characteristic|
+childincidentcount|
+clientupdate|
+columnmapping|
+commitment|
+competitor|
+competitoraddress|
+competitorproduct|
+competitorsalesliterature|
+complexcontrol|
+connection|
+connectionrole|
+connectionroleassociation|
+connectionroleobjecttypecode|
+connector|
+constraintbasedgroup|
+contactinvoices|
+contactleads|
+contactorders|
+contactquotes|
+contract|
+contractdetail|
+contracttemplate|
+convertrule|
+convertruleitem|
+customcontrol|
+customcontroldefaultconfig|
+customcontrolresource|
+customeraddress|
+customeropportunityrole|
+customerrelationship|
+dataperformance|
+dd_chartmapentity|
+delveactionhub|
+dependency|
+dependencyfeature|
+dependencynode|
+discount|
+discounttype|
+displaystring|
+displaystringmap|
+documentindex|
+documenttemplate|
+duplicaterecord|
+duplicaterule|
+duplicaterulecondition|
+dynamicproperty|
+dynamicpropertyassociation|
+dynamicpropertyinstance|
+dynamicpropertyoptionsetitem|
+emailhash|
+emailsearch|
+emailserverprofile|
+emailsignature|
+entitlement|
+entitlementchannel|
+entitlementcontacts|
+entitlemententityallocationtypemapping|
+entitlementproducts|
+entitlementtemplate|
+entitlementtemplatechannel|
+entitlementtemplateproducts|
+entity|
+entityanalyticsconfig|
+entitydataprovider|
+entitydatasource|
+entityimageconfig|
+entitykey|
+entitymap|
+entityrelationship|
+environmentvariabledefinition|
+environmentvariablevalue|
+equipment|
+exchangesyncidmapping|
+expanderevent|
+expiredprocess|
+externalparty|
+externalpartyitem|
+feedback|
+fieldpermission|
+fieldsecurityprofile|
+fileattachment|
+filtertemplate|
+fixedmonthlyfiscalcalendar|
+flowsession|
+globalsearchconfiguration|
+goal|
+goalrollupquery|
+hierarchyrule|
+hierarchysecurityconfiguration|
+holidaywrapper|
+imagedescriptor|
+import|
+importdata|
+importentitymapping|
+importfile|
+importjob|
+importlog|
+importmap|
+incident|
+incidentknowledgebaserecord|
+incidentresolution|
+integrationstatus|
+interactionforemail|
+internaladdress|
+interprocesslock|
+invaliddependency|
+invoice|
+invoicedetail|
+isvconfig|
+kbarticle|
+kbarticlecomment|
+kbarticletemplate|
+knowledgearticle|
+knowledgearticleincident|
+knowledgearticlescategories|
+knowledgearticleviews|
+knowledgebaserecord|
+knowledgesearchmodel|
+languagelocale|
+languageprovisioningstate|
+lead|
+leadaddress|
+leadcompetitors|
+leadproduct|
+leadtoopportunitysalesprocess|
+li_inmail|
+li_message|
+li_pointdrivepresentationviewed|
+license|
+list|
+listmember|
+localconfigstore|
+lookupmapping|
+mailbox|
+mailboxstatistics|
+mailboxtrackingcategory|
+mailboxtrackingfolder|
+mailmergetemplate|
+metadatadifference|
+metric|
+mobileofflineprofile|
+mobileofflineprofileitem|
+mobileofflineprofileitemassociation|
+monthlyfiscalcalendar|
+msdyn_actioncardregarding|
+msdyn_actioncardrolesetting|
+msdyn_aiconfiguration|
+msdyn_aifptrainingdocument|
+msdyn_aimodel|
+msdyn_aiodimage|
+msdyn_aiodlabel|
+msdyn_aiodlabel_msdyn_aiconfiguration|
+msdyn_aiodtrainingboundingbox|
+msdyn_aiodtrainingimage|
+msdyn_aitemplate|
+msdyn_analysiscomponent|
+msdyn_analysisjob|
+msdyn_analysisresult|
+msdyn_analysisresultdetail|
+msdyn_answer|
+msdyn_autocapturerule|
+msdyn_autocapturesettings|
+msdyn_azuredeployment|
+msdyn_callablecontext|
+msdyn_callablecontext_msdyn_playbooktemplate|
+msdyn_collabgraphresource|
+msdyn_collaboration|
+msdyn_componentlayer|
+msdyn_componentlayerdatasource|
+msdyn_connector|
+msdyn_databaseversion|
+msdyn_entityrankingrule|
+msdyn_feedbackmapping|
+msdyn_feedbacksubsurvey|
+msdyn_feedbacksubsurvey_msdyn_survey|
+msdyn_flowcardtype|
+msdyn_forecastconfiguration|
+msdyn_forecastdefinition|
+msdyn_forecastinstance|
+msdyn_forecastrecurrence|
+msdyn_groupsheader|
+msdyn_helppage|
+msdyn_icebreakersconfig|
+msdyn_image|
+msdyn_imagetokencache|
+msdyn_import|
+msdyn_knowledgearticleimage|
+msdyn_knowledgearticletemplate|
+msdyn_linkedanswer|
+msdyn_msteamssetting|
+msdyn_msteamssettingsv2|
+msdyn_notesanalysisconfig|
+msdyn_odatav4ds|
+msdyn_orginsightsuserdashboarddefinition|
+msdyn_page|
+msdyn_pendinggroupmembers|
+msdyn_playbookactivity|
+msdyn_playbookactivityattribute|
+msdyn_playbookcategory|
+msdyn_playbookinstance|
+msdyn_playbooktemplate|
+msdyn_postalbum|
+msdyn_postconfig|
+msdyn_postruleconfig|
+msdyn_question|
+msdyn_question_answer_n_n|
+msdyn_questiongroup|
+msdyn_questionresponse|
+msdyn_questiontype|
+msdyn_relationshipinsightsunifiedconfig|
+msdyn_responseaction|
+msdyn_responseblobstore|
+msdyn_responsecondition|
+msdyn_responseerror|
+msdyn_responseoutcome|
+msdyn_responserouting|
+msdyn_responserouting_msdyn_responseaction|
+msdyn_responserouting_responseaction_else|
+msdyn_salesinsightssettings|
+msdyn_section|
+msdyn_siconfig|
+msdyn_sikeyvalueconfig|
+msdyn_solutioncomponentdatasource|
+msdyn_solutioncomponentsummary|
+msdyn_solutionhealthrule|
+msdyn_solutionhealthruleargument|
+msdyn_solutionhealthruleset|
+msdyn_solutionhistory|
+msdyn_solutionhistorydatasource|
+msdyn_suggestedactivity|
+msdyn_suggestedactivitydatasource|
+msdyn_suggestedcontact|
+msdyn_suggestedcontactsdatasource|
+msdyn_survey|
+msdyn_surveyinvite|
+msdyn_surveylog|
+msdyn_surveyresponse|
+msdyn_teamscollaboration|
+msdyn_theme|
+msdyn_untrackedappointment|
+msdyn_upgraderun|
+msdyn_upgradestep|
+msdyn_upgradeversion|
+msdyn_vocconfiguration|
+msdyn_wallsavedquery|
+msdyn_wallsavedqueryusersettings|
+msfp_emailtemplate|
+msfp_question|
+msfp_questionresponse|
+msfp_survey|
+msfp_surveyinvite|
+msfp_surveyresponse|
+msfp_unsubscribedrecipient|
+multientitysearch|
+multientitysearchentities|
+multiselectattributeoptionvalues|
+navigationsetting|
+newprocess|
+notification|
+officedocument|
+officegraphdocument|
+offlinecommanddefinition|
+opportunity|
+opportunityclose|
+opportunitycompetitors|
+opportunityproduct|
+opportunitysalesprocess|
+optionset|
+orderclose|
+organization|
+organizationstatistic|
+organizationui|
+orginsightsmetric|
+orginsightsnotification|
+owner|
+ownermapping|
+partnerapplication|
+personaldocumenttemplate|
+phonetocaseprocess|
+picklistmapping|
+pluginassembly|
+plugintracelog|
+plugintype|
+plugintypestatistic|
+position|
+post|
+postcomment|
+postfollow|
+postlike|
+postregarding|
+postrole|
+pricelevel|
+principalattributeaccessmap|
+principalentitymap|
+principalobjectaccess|
+principalobjectaccessreadsnapshot|
+principalobjectattributeaccess|
+principalsyncattributemap|
+privilege|
+privilegeobjecttypecodes|
+processsession|
+processstage|
+processtrigger|
+product|
+productassociation|
+productpricelevel|
+productsalesliterature|
+productsubstitute|
+publisher|
+publisheraddress|
+quarterlyfiscalcalendar|
+queue|
+queueitem|
+queueitemcount|
+queuemembercount|
+queuemembership|
+quote|
+quoteclose|
+quotedetail|
+ratingmodel|
+ratingvalue|
+recommendeddocument|
+recordcountsnapshot|
+recurrencerule|
+recurringappointmentmaster|
+relationshiprole|
+relationshiprolemap|
+replicationbacklog|
+report|
+reportcategory|
+reportentity|
+reportlink|
+reportvisibility|
+resource|
+resourcegroup|
+resourcegroupexpansion|
+resourcespec|
+ribbonclientmetadata|
+ribboncommand|
+ribboncontextgroup|
+ribboncustomization|
+ribbondiff|
+ribbonmetadatatoprocess|
+ribbonrule|
+ribbontabtocommandmap|
+roleprivileges|
+roletemplate|
+roletemplateprivileges|
+rollupfield|
+rollupjob|
+rollupproperties|
+routingrule|
+routingruleitem|
+runtimedependency|
+sales_linkedin_configuration|
+sales_linkedin_profileassociations|
+salesliterature|
+salesliteratureitem|
+salesorder|
+salesorderdetail|
+salesprocessinstance|
+savedorginsightsconfiguration|
+savedquery|
+savedqueryvisualization|
+sdkmessage|
+sdkmessagefilter|
+sdkmessagepair|
+sdkmessageprocessingstep|
+sdkmessageprocessingstepimage|
+sdkmessageprocessingstepsecureconfig|
+sdkmessagerequest|
+sdkmessagerequestfield|
+sdkmessageresponse|
+sdkmessageresponsefield|
+semiannualfiscalcalendar|
+service|
+serviceappointment|
+servicecontractcontacts|
+serviceendpoint|
+serviceplan|
+serviceplanappmodules|
+sharedobjectsforread|
+sharepointdata|
+sharepointdocument|
+sharepointdocumentlocation|
+sharepointsite|
+similarityrule|
+site|
+sitemap|
+sla|
+slaitem|
+slakpiinstance|
+socialactivity|
+socialinsightsconfiguration|
+socialprofile|
+solution|
+solutioncomponent|
+solutioncomponentattributeconfiguration|
+solutioncomponentdefinition|
+solutionhistorydata|
+sqlencryptionaudit|
+statusmap|
+stringmap|
+subject|
+subscription|
+subscriptionclients|
+subscriptionmanuallytrackedobject|
+subscriptionstatisticsoffline|
+subscriptionstatisticsoutlook|
+subscriptionsyncentryoffline|
+subscriptionsyncentryoutlook|
+subscriptionsyncinfo|
+subscriptiontrackingdeletedobject|
+suggestioncardtemplate|
+syncattributemapping|
+syncattributemappingprofile|
+syncerror|
+systemapplicationmetadata|
+systemform|
+systemuserbusinessunitentitymap|
+systemuserlicenses|
+systemusermanagermap|
+systemuserprincipals|
+systemuserprofiles|
+systemusersyncmappingprofiles|
+teammembership|
+teamprofiles|
+teamroles|
+teamsyncattributemappingprofiles|
+teamtemplate|
+template|
+territory|
+textanalyticsentitymapping|
+theme|
+timestampdatemapping|
+timezonedefinition|
+timezonelocalizedname|
+timezonerule|
+topic|
+topichistory|
+topicmodel|
+topicmodelconfiguration|
+topicmodelexecutionhistory|
+traceassociation|
+tracelog|
+traceregarding|
+transactioncurrency|
+transformationmapping|
+transformationparametermapping|
+translationprocess|
+unresolvedaddress|
+untrackedemail|
+uom|
+uomschedule|
+userapplicationmetadata|
+userentityinstancedata|
+userentityuisettings|
+userfiscalcalendar|
+userform|
+usermapping|
+userquery|
+userqueryvisualization|
+usersearchfacet|
+usersettings|
+webresource|
+webwizard|
+wizardaccessprivilege|
+wizardpage|
+workflow|
+workflowbinary|
+workflowdependency|
+workflowlog|
+workflowwaitsubscription</EntitiesToSkip>
+    <EntitiesWhitelist>contact|
+kev_ville</EntitiesWhitelist>
+    <EntityAttributeSpecifiedNames />
+    <EntityPrefixesToSkip />
+    <EntityPrefixesWhitelist />
+    <GenerateActionAttributeNameConsts>false</GenerateActionAttributeNameConsts>
+    <GenerateAttributeNameConsts>true</GenerateAttributeNameConsts>
+    <GenerateAnonymousTypeConstructor>false</GenerateAnonymousTypeConstructor>
+    <GenerateConstructorsSansLogicalName>false</GenerateConstructorsSansLogicalName>
+    <GenerateEntityRelationships>false</GenerateEntityRelationships>
+    <GenerateEntityTypeCode>false</GenerateEntityTypeCode>
+    <GenerateEnumProperties>false</GenerateEnumProperties>
+    <GenerateOnlyReferencedOptionSets>true</GenerateOnlyReferencedOptionSets>
+    <GenerateOptionSetMetadataAttribute>false</GenerateOptionSetMetadataAttribute>
+    <GroupLocalOptionSetsByEntity>false</GroupLocalOptionSetsByEntity>
+    <InvalidCSharpNamePrefix>_</InvalidCSharpNamePrefix>
+    <MakeAllFieldsEditable>false</MakeAllFieldsEditable>
+    <MakeReadonlyFieldsEditable>false</MakeReadonlyFieldsEditable>
+    <MakeResponseActionsEditable>false</MakeResponseActionsEditable>
+    <LocalOptionSetFormat>{0}_{1}</LocalOptionSetFormat>
+    <OptionSetLanguageCodeOverride
+      xsi:nil="true" />
+    <OptionSetPrefixesToSkip />
+    <OptionSetsToSkip />
+    <OptionSetNames />
+    <ProjectNameForEarlyBoundFiles />
+    <PropertyEnumMappings />
+    <ReadSerializedMetadata>false</ReadSerializedMetadata>
+    <RemoveRuntimeVersionComment>true</RemoveRuntimeVersionComment>
+    <ReplaceOptionSetPropertiesWithEnum>false</ReplaceOptionSetPropertiesWithEnum>
+    <SerializeMetadata>false</SerializeMetadata>
+    <TokenCapitalizationOverrides>AccessTeam|
+ActiveState|
+BusinessAs|
+CardUci|
+DefaultOnCase|
+EmailAnd|
+FeatureSet|
+IsMsTeams|
+IsPaiEnabled|
+IsSopIntegration|
+MsDyUsd|
+O365Admin|
+OnHold|
+OwnerOnAssign|
+ParticipatesIn|
+PartiesOnEmail|
+PauseStates|
+SentOn|
+SlaId|
+SlaKpi|
+SyncOptIn|
+Timeout|
+UserPuid|
+VoiceMail|
+Weblink</TokenCapitalizationOverrides>
+    <UnmappedProperties>duplicaterule:BaseEntityTypeCode,MatchingEntityTypeCode|
+invoicedetail:InvoiceStateCode|
+leadaddress:AddressTypeCode,ShippingMethodCode|
+organization:CurrencyFormatCode,DateFormatCode,TimeFormatCode,WeekStartDayCode|
+quote:StatusCode|
+quotedetail:QuoteStateCode|
+salesorderdetail:SalesOrderStateCode</UnmappedProperties>
+    <UseDeprecatedOptionSetNaming>false</UseDeprecatedOptionSetNaming>
+    <UseLogicalNames>false</UseLogicalNames>
+    <UseTfsToCheckoutFiles>false</UseTfsToCheckoutFiles>
+    <UseInternalAsAccessModifier>false</UseInternalAsAccessModifier>
+    <WaitForAttachedDebugger>false</WaitForAttachedDebugger>
+  </ExtensionConfig>
+  <ExtensionArguments>
+    <Argument>
+      <SettingType>Actions</SettingType>
+      <Name>codecustomization</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.Action.CustomizeCodeDomService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>Actions</SettingType>
+      <Name>codegenerationservice</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.Action.CustomCodeGenerationService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>Actions</SettingType>
+      <Name>codewriterfilter</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.Action.CodeWriterFilterService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>Actions</SettingType>
+      <Name>metadataproviderservice</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.BaseMetadataProviderService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>Entities</SettingType>
+      <Name>codecustomization</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.Entity.CustomizeCodeDomService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>Entities</SettingType>
+      <Name>codegenerationservice</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.Entity.CustomCodeGenerationService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>Entities</SettingType>
+      <Name>codewriterfilter</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.Entity.CodeWriterFilterService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>Entities</SettingType>
+      <Name>namingservice</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.NamingService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>Entities</SettingType>
+      <Name>metadataproviderservice</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.Entity.MetadataProviderService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>OptionSets</SettingType>
+      <Name>codecustomization</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.OptionSet.CustomizeCodeDomService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>OptionSets</SettingType>
+      <Name>codegenerationservice</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.OptionSet.CustomCodeGenerationService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>OptionSets</SettingType>
+      <Name>codewriterfilter</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.OptionSet.CodeWriterFilterService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>OptionSets</SettingType>
+      <Name>namingservice</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.NamingService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>OptionSets</SettingType>
+      <Name>metadataproviderservice</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.BaseMetadataProviderService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+  </ExtensionArguments>
+  <UserArguments>
+    <Argument>
+      <SettingType>Actions</SettingType>
+      <Name>generateActions</Name>
+      <Value>true</Value>
+      <Valueless>true</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>Actions</SettingType>
+      <Name>out</Name>
+      <Value>Shared\Kev.Xrm.EntityWrappers\Actions.cs</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>All</SettingType>
+      <Name>namespace</Name>
+      <Value>Kev.Xrm.EntityWrappers</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>Entities</SettingType>
+      <Name>out</Name>
+      <Value>..\..\..\..\..\Desktop\</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>Entities</SettingType>
+      <Name>servicecontextname</Name>
+      <Value>CrmServiceContext</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>OptionSets</SettingType>
+      <Name>out</Name>
+      <Value>C:\Users\kavna\Desktop\Javista\Part Time\Day 1\OptionSets.cs</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>All</SettingType>
+      <Name>SuppressGeneratedCodeAttribute</Name>
+      <Value>true</Value>
+      <Valueless>true</Valueless>
+    </Argument>
+  </UserArguments>
+  <WorkflowlessActions>msdyn_GetSIFeatureConfiguration|
+RetrieveAppSetting|
+RetrieveAppSettingList|
+SaveAppSetting</WorkflowlessActions>
+</Config>

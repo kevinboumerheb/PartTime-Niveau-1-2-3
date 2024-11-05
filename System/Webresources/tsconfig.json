@@ -1,0 +1,17 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "rootDir": "./ts",
+    "outDir": "./jav_/Scripts",
+    "target": "ES5",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "removeComments": true
+  },
+  "include": [
+    "./ts/Form/*",
+    "./ts/Grid/*",
+    "./ts/Ribbon/*",
+    "./ts/Shared/*"
+  ]
+}
