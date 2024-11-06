@@ -34,9 +34,7 @@ namespace Kev.Xrm.ConsoleApp
             {
                 LogAndDisplayHelper.LogAndDisplay("Connected to Dynamics 365 successfully.", logFilePath);
 
-
                 ContactService contactService = new ContactService(service, service);
-
 
                 // 1. Retrieve the list of contacts
                 List<Contact> contacts = contactService.RetrieveContacts(service);
