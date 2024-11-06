@@ -17,6 +17,7 @@ namespace Kev.Xrm.ConsoleApp
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
             string correctDirectory = Directory.GetParent(baseDirectory).Parent.Parent.FullName;
             string logFilePath = Path.Combine(correctDirectory, "log.txt");
+            
             // Clear the log file at the beginning of the program
             File.WriteAllText(logFilePath, ""); // Clear the log file
 
@@ -32,12 +33,12 @@ namespace Kev.Xrm.ConsoleApp
             
             if (service.IsReady)
             {
-                LogAndDisplayHelper.LogAndDisplay("Connected to Dynamics 365 successfully.", logFilePath);
+                //LogAndDisplayHelper.LogAndDisplay("Connected to Dynamics 365 successfully.", logFilePath);
 
                 ContactService contactService = new ContactService(service, service);
 
                 // 1. Retrieve the list of contacts
-                List<Contact> contacts = contactService.RetrieveContacts(service);
+                List<Contact> contacts = contactService.RetrieveContacts();
 
                 // 2. Filter active contacts
                 List<Contact> activeContacts = contacts
@@ -64,16 +65,16 @@ namespace Kev.Xrm.ConsoleApp
                 LogAndDisplayHelper.LogAndDisplay($"Number of contacts with age < 18: {minorContactsCount}", logFilePath);
 
                 // 8. Display each contact type dynamically with counts
-                contactService.DisplayContactTypes(service, activeContacts, logFilePath);
+                contactService.DisplayContactTypes(activeContacts, logFilePath);
 
                 // 9. Update Contacts 
-                //contactService.UpdateContactsWithCityLookup(service, activeContacts);
+                //contactService.UpdateContactsWithCityLookup(activeContacts);
 
                 // 9. Update Contacts with ExecuteMultipleRequest
-                contactService.UpdateContactsWithCityLookupUsingExecuteMultiple(service, activeContacts, logFilePath);
+                contactService.UpdateContactsWithCityLookupUsingExecuteMultiple(activeContacts, logFilePath);
 
                 // 9. Create Contacts with ExecuteMultipleRequest and measure execution time
-                contactService.RunComparison(service, logFilePath);
+                contactService.RunComparison(logFilePath);
 
                 LogAndDisplayHelper.LogAndDisplay("Process completed.", logFilePath);
             }

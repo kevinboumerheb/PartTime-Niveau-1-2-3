@@ -212,7 +212,7 @@ namespace Kev.Xrm.Service
         }
 
         // Retrieve the list of contacts
-        public List<Contact> RetrieveContacts(CrmServiceClient service)
+        public List<Contact> RetrieveContacts()
         {
             // Define the query to retrieve contacts
             QueryExpression query = new QueryExpression(Contact.EntityLogicalName)
@@ -237,7 +237,7 @@ namespace Kev.Xrm.Service
         }
 
         // Method to display contact types
-        public void DisplayContactTypes(CrmServiceClient service, List<Contact> contacts, string logFilePath)
+        public void DisplayContactTypes(List<Contact> contacts, string logFilePath)
         {
             RetrieveAttributeRequest attributeRequest = new RetrieveAttributeRequest
             {
@@ -246,7 +246,7 @@ namespace Kev.Xrm.Service
                 RetrieveAsIfPublished = true
             };
 
-            RetrieveAttributeResponse attributeResponse = (RetrieveAttributeResponse)service.Execute(attributeRequest);
+            RetrieveAttributeResponse attributeResponse = (RetrieveAttributeResponse)AdminService.Execute(attributeRequest);
             PicklistAttributeMetadata metadata = (PicklistAttributeMetadata)attributeResponse.AttributeMetadata;
 
             foreach (var option in metadata.OptionSet.Options)
@@ -257,7 +257,7 @@ namespace Kev.Xrm.Service
         }
 
         // Helper method to update contacts with city lookup
-        public void UpdateContactsWithCityLookup(CrmServiceClient service, List<Contact> contacts)
+        public void UpdateContactsWithCityLookup(List<Contact> contacts)
         {
             foreach (var contact in contacts)
             {
@@ -265,18 +265,18 @@ namespace Kev.Xrm.Service
                 string cityName = contact.Address1_City;
                 if (!string.IsNullOrEmpty(cityName))
                 {
-                    kev_Ville city = FindOrCreateCity(service, cityName);
+                    kev_Ville city = FindOrCreateCity(cityName);
                     if (city != null)
                     {
                         contact.kev_VilleId = new EntityReference(kev_Ville.EntityLogicalName, city.Id);
-                        service.Update(contact);
+                        AdminService.Update(contact);
                     }
                 }
             }
         }
 
         // Helper method to find or create a city
-        private kev_Ville FindOrCreateCity(CrmServiceClient service, string cityName)
+        private kev_Ville FindOrCreateCity(string cityName)
         {
             QueryExpression cityQuery = new QueryExpression(kev_Ville.EntityLogicalName)
             {
@@ -289,18 +289,18 @@ namespace Kev.Xrm.Service
                     }
                 }
             };
-            EntityCollection cities = service.RetrieveMultiple(cityQuery);
+            EntityCollection cities = AdminService.RetrieveMultiple(cityQuery);
             if (cities.Entities.Any())
                 return cities.Entities.First().ToEntity<kev_Ville>();
 
             // Create a new city if it does not exist
             kev_Ville newCity = new kev_Ville { kev_Name = cityName };
-            newCity.Id = service.Create(newCity);
+            newCity.Id = AdminService.Create(newCity);
             return newCity;
         }
 
         // Helper method to update contacts with city lookup using ExecuteMultipleRequest
-        public void UpdateContactsWithCityLookupUsingExecuteMultiple(CrmServiceClient service, List<Contact> contacts, string logFilePath)
+        public void UpdateContactsWithCityLookupUsingExecuteMultiple(List<Contact> contacts, string logFilePath)
         {
             // Create an ExecuteMultipleRequest object
             var multipleRequest = new ExecuteMultipleRequest()
@@ -319,7 +319,7 @@ namespace Kev.Xrm.Service
                 string cityName = contact.Address1_City;
                 if (!string.IsNullOrEmpty(cityName))
                 {
-                    kev_Ville city = FindOrCreateCity(service, cityName);
+                    kev_Ville city = FindOrCreateCity(cityName);
                     if (city != null)
                     {
                         contact.kev_VilleId = new EntityReference(kev_Ville.EntityLogicalName, city.Id);
@@ -336,7 +336,7 @@ namespace Kev.Xrm.Service
             // Execute the batch request if there are requests to process
             if (multipleRequest.Requests.Count > 0)
             {
-                var response = (ExecuteMultipleResponse)service.Execute(multipleRequest);
+                var response = (ExecuteMultipleResponse)AdminService.Execute(multipleRequest);
 
                 // Process the responses
                 foreach (var responseItem in response.Responses)
@@ -359,7 +359,7 @@ namespace Kev.Xrm.Service
         }
 
         // Method to create 1000 contacts without ExecuteMultipleRequest
-        private void CreateContactsIndividually(CrmServiceClient service)
+        private void CreateContactsIndividually()
         {
             for (int i = 0; i < 10; i++)
             {
@@ -370,12 +370,12 @@ namespace Kev.Xrm.Service
                     kev_TVANumber = GenerateTVANumber()
                 };
 
-                service.Create(contact); // Individual create request
+                AdminService.Create(contact); // Individual create request
             }
         }
 
         // Method to create 1000 contacts with ExecuteMultipleRequest
-        private void CreateContactsWithExecuteMultiple(CrmServiceClient service, string logFilePath)
+        private void CreateContactsWithExecuteMultiple(string logFilePath)
         {
             var multipleRequest = new ExecuteMultipleRequest()
             {
@@ -401,7 +401,7 @@ namespace Kev.Xrm.Service
             //    // Execute in batches of 100 to manage payload
             //    if (multipleRequest.Requests.Count == 100 || i == 1999)
             //    {
-            //        var response = (ExecuteMultipleResponse)service.Execute(multipleRequest);
+            //        var response = (ExecuteMultipleResponse)AdminService.Execute(multipleRequest);
 
             //        foreach (var responseItem in response.Responses)
             //        {
@@ -427,7 +427,7 @@ namespace Kev.Xrm.Service
             }
 
             // Execute the batch request for the 10 contacts
-            var response = (ExecuteMultipleResponse)service.Execute(multipleRequest);
+            var response = (ExecuteMultipleResponse)AdminService.Execute(multipleRequest);
 
             foreach (var responseItem in response.Responses)
             {
@@ -439,17 +439,17 @@ namespace Kev.Xrm.Service
         }
 
         // Method to run both approaches and measure execution time
-        public void RunComparison(CrmServiceClient service, string logFilePath)
+        public void RunComparison(string logFilePath)
         {
             // Measure time for individual creation
             var stopwatch = Stopwatch.StartNew();
-            CreateContactsIndividually(service);
+            CreateContactsIndividually();
             stopwatch.Stop();
             LogAndDisplayHelper.LogAndDisplay($"Time taken without ExecuteMultiple: {stopwatch.Elapsed}", logFilePath);
 
             // Measure time for batched creation using ExecuteMultiple
             stopwatch.Restart();
-            CreateContactsWithExecuteMultiple(service, logFilePath);
+            CreateContactsWithExecuteMultiple(logFilePath);
             stopwatch.Stop();
             LogAndDisplayHelper.LogAndDisplay($"Time taken with ExecuteMultiple: {stopwatch.Elapsed}", logFilePath);
         }
