@@ -57,11 +57,11 @@ namespace Kev.Xrm.ConsoleApp
                 LogAndDisplayHelper.LogAndDisplay($"Number of inactive contacts: {inactiveContacts.Count}", logFilePath);
 
                 // 6. Display the count of contacts with age > 18
-                int adultContactsCount = activeContacts.Count(c => c.Contains("birthdate") && contactService.CalculateAge((DateTime)c["birthdate"]) > 18);
+                int adultContactsCount = activeContacts.Count(c => c.BirthDate.HasValue && contactService.CalculateAge(c.BirthDate.Value) > 18);
                 LogAndDisplayHelper.LogAndDisplay($"Number of contacts with age > 18: {adultContactsCount}", logFilePath);
 
                 // 7. (OPTIONAL) Display the count of contacts with age < 18
-                int minorContactsCount = activeContacts.Count(c => c.Contains("birthdate") && contactService.CalculateAge((DateTime)c["birthdate"]) < 18);
+                int minorContactsCount = activeContacts.Count(c => c.BirthDate.HasValue && contactService.CalculateAge(c.BirthDate.Value) < 18);
                 LogAndDisplayHelper.LogAndDisplay($"Number of contacts with age < 18: {minorContactsCount}", logFilePath);
 
                 // 8. Display each contact type dynamically with counts
