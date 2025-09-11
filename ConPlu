@@ -1,0 +1,64 @@
+using Kevs.Xrm.EntityWrappers;
+using Kevs.Xrm.Plugins.AppCode;
+using Kevs.Xrm.Plugins.AppCode.Attributes;
+using Kevs.Xrm.Service;
+using Microsoft.Xrm.Sdk;
+using System;
+
+namespace Kevs.Xrm.Plugins
+{
+    [PrimaryEntity(Contact.EntityLogicalName)]
+    public class ContactPlugin : Plugin
+    {
+        /// <summary>
+        /// Le constructeur est nécessaire pour passer les configurations
+        /// de fonctionnalité
+        /// </summary>
+        /// <remarks>
+        /// La configuration de fonctionnalité doit être définie dans la
+        /// configuration non sécurisée de l'étape de traitement de plugin
+        /// comme ci-dessous:
+        /// {"Features":[{"Enabled":true,"Name":"MaFonctionnalité"},{"Enabled":false,"Name":"feature2"}]}
+        /// </remarks>
+        /// <param name="unsecureConfiguration"></param>
+        /// <param name="secureConfiguration"></param>
+        public ContactPlugin(string unsecureConfiguration, string secureConfiguration)
+        : base(unsecureConfiguration, secureConfiguration)
+        {
+        }
+
+        // Plugin #102 - a
+        public override void PreValidationCreate(ExtendedServiceProvider esp)
+        {
+            Guid userId = esp.GetInitiatingUserId();
+            ContactService contactService = new ContactService(esp.AdminService, esp.UserService, esp.TracingService);
+            contactService.ThrowIfContactNotInDivisionX(userId);
+        }
+
+        // Plugin #102 - b
+        public override void PreOperationCreate(ExtendedServiceProvider esp)
+        {
+            Guid userId = esp.GetInitiatingUserId();
+            Contact contact = esp.GetInputData<Contact>();
+            ContactService contactService = new ContactService(esp.AdminService, esp.UserService, esp.TracingService);
+            contactService.UpdateContactWithDivisionX(contact, userId);
+        }
+
+        // Plugin #103
+        public override void PreOperationUpdate(ExtendedServiceProvider esp)
+        {
+            Contact contact = esp.GetInputData<Contact>();
+            ContactService contactService = new ContactService(esp.AdminService, esp.UserService, esp.TracingService);
+            contactService.UpdateContactFromAccount(contact);
+        }
+
+        // Plugin #201
+        public override void PostOperationUpdateAsync(ExtendedServiceProvider esp)
+        {
+            Contact contact = esp.GetInputData<Contact>();
+            Contact preImage = esp.GetPreImage<Contact>("PreImage");
+            ContactService contactService = new ContactService(esp.AdminService, esp.UserService, esp.TracingService);
+           contactService.CreateContactHistory(contact, preImage);
+        }
+    }
+}
